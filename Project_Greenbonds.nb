@@ -10,77 +10,76 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     65370,       1123]
-NotebookOptionsPosition[     63847,       1091]
-NotebookOutlinePosition[     64279,       1108]
-CellTagsIndexPosition[     64236,       1105]
+NotebookDataLength[     60719,       1063]
+NotebookOptionsPosition[     59512,       1036]
+NotebookOutlinePosition[     59944,       1053]
+CellTagsIndexPosition[     59901,       1050]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"pdf", " ", "=", 
+  RowBox[{"dir", " ", "=", " ", 
+   RowBox[{"NotebookDirectory", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"reportsPath", " ", "=", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{"dir", ",", "\"\<test_reports\>\""}], "}"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"foldersPath", " ", "=", " ", 
+   RowBox[{"FileNames", "[", 
+    RowBox[{"All", ",", "reportsPath"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pdfPath", " ", "=", " ", 
+   RowBox[{"Map", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"FileNames", "[", 
+       RowBox[{"All", ",", "#"}], "]"}], "&"}], ",", "foldersPath"}], "]"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pdfClassification", " ", "=", " ", 
+   RowBox[{"AssociationThread", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<green\>\"", ",", "\"\<social\>\"", ",", 
+       "\"\<sustainability related\>\"", ",", " ", "\"\<sustainability\>\""}],
+       "}"}], "->", "pdfPath"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.878116621495508*^9, 3.8781166228153887`*^9}, {
+  3.8781168998713727`*^9, 3.8781169017476745`*^9}, {3.878116938649276*^9, 
+  3.8781169646078396`*^9}, {3.8781169990064845`*^9, 3.8781170131971097`*^9}, {
+  3.878117052880612*^9, 3.878117139250909*^9}, {3.878117183472026*^9, 
+  3.8781172286691465`*^9}, {3.8781172976305847`*^9, 3.878117403300892*^9}, {
+  3.8781175509951906`*^9, 3.8781175711820517`*^9}, {3.8781176755475616`*^9, 
+  3.878117856219328*^9}, {3.878117887525975*^9, 3.8781179045112896`*^9}},
+ CellLabel->
+  "In[107]:=",ExpressionUUID->"7889be16-c24b-481d-86e6-7cfbf3730ada"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"pdfGreen", " ", "=", " ", 
    RowBox[{"Import", "[", 
     RowBox[{
-    "\"\<C:\\\\Users\\\\massi\\\\Documents\\\\Universit\[AGrave]\\\\MASTER_\
-EPFL\\\\Semester_3\\\\machine \
-Learning\\\\Green_Bonds\\\\test_reports\\\\Green_reports\\\\ABANCA Corporaci\
-\[OAcute]n Bancaria, S. A..pdf\>\"", ",", " ", "\"\<Plaintext\>\""}], "]"}]}],
-   ";"}], "\[IndentingNewLine]", 
- RowBox[{"listElements", " ", "=", " ", 
-  RowBox[{"Import", "[", 
-   RowBox[{
-   "\"\<C:\\\\Users\\\\massi\\\\Documents\\\\Universit\[AGrave]\\\\MASTER_\
-EPFL\\\\Semester_3\\\\machine \
-Learning\\\\Green_Bonds\\\\test_reports\\\\Green_reports\\\\ABANCA Corporaci\
-\[OAcute]n Bancaria, S. A..pdf\>\"", ",", " ", "\"\<Elements\>\""}], 
-   "]"}]}]}], "Input",
- CellChangeTimes->{{3.878036302788803*^9, 3.878036355480997*^9}, {
-   3.8780364208694334`*^9, 3.878036424967189*^9}, {3.878036517978134*^9, 
-   3.8780365302513285`*^9}, 3.8780365985767016`*^9, 3.8780367597856064`*^9, {
-   3.8780370478063774`*^9, 3.878037068419613*^9}, {3.878037099952283*^9, 
-   3.878037360291026*^9}, {3.8780374113622465`*^9, 3.8780374122430706`*^9}},
- CellLabel->"In[77]:=",ExpressionUUID->"8eebf1a7-447a-4532-9d67-03a75225a97a"],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{"\<\"AttachmentCount\"\>", ",", "\<\"AttachmentData\"\>", 
-   ",", "\<\"AttachmentDetails\"\>", ",", "\<\"AttachmentList\"\>", 
-   ",", "\<\"AttachmentNames\"\>", ",", "\<\"Author\"\>", 
-   ",", "\<\"ContentsGraph\"\>", ",", "\<\"ContentsStartPage\"\>", 
-   ",", "\<\"CreationDate\"\>", ",", "\<\"Creator\"\>", 
-   ",", "\<\"EmbeddedImageCount\"\>", ",", "\<\"EmbeddedImages\"\>", 
-   ",", "\<\"FormattedText\"\>", ",", "\<\"FormFieldRules\"\>", 
-   ",", "\<\"HighlightedText\"\>", ",", "\<\"Hyperlinks\"\>", 
-   ",", "\<\"Keywords\"\>", ",", "\<\"MetaInformation\"\>", 
-   ",", "\<\"ModificationDate\"\>", ",", "\<\"PageCount\"\>", 
-   ",", "\<\"PageFormattedText\"\>", ",", "\<\"PageGraphics\"\>", 
-   ",", "\<\"PageImages\"\>", ",", "\<\"PagePlaintext\"\>", 
-   ",", "\<\"PagePositionedText\"\>", ",", "\<\"Plaintext\"\>", 
-   ",", "\<\"Producer\"\>", ",", "\<\"RawAttachmentList\"\>", 
-   ",", "\<\"Subject\"\>", ",", "\<\"TextAnnotations\"\>", 
-   ",", "\<\"Title\"\>", ",", "\<\"URLs\"\>", ",", "\<\"Version\"\>"}], 
-  "}"}]], "Output",
- CellChangeTimes->{3.878037305354645*^9, 3.878037361267868*^9, 
-  3.878037413116528*^9, 3.878037938733915*^9},
- CellLabel->"Out[78]=",ExpressionUUID->"55e00cba-dfd8-4e89-8b33-ddfe40ce0cdc"]
-}, Open  ]],
-
-Cell[BoxData[
+     RowBox[{
+      RowBox[{"pdfClassification", "[", "\"\<green\>\"", "]"}], "[", 
+      RowBox[{"[", "1", "]"}], "]"}], ",", " ", "\"\<Plaintext\>\""}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"pdfSocial", " ", "=", " ", 
    RowBox[{"Import", "[", 
     RowBox[{
-    "\"\<C:\\\\Users\\\\massi\\\\Documents\\\\Universit\[AGrave]\\\\MASTER_\
-EPFL\\\\Semester_3\\\\machine \
-Learning\\\\Green_Bonds\\\\test_reports\\\\Social_reports\\\\Albany_External \
-Review Report.pdf\>\"", ",", " ", "\"\<Plaintext\>\""}], "]"}]}], 
-  ";"}]], "Input",
- CellChangeTimes->{{3.8780376322326612`*^9, 3.87803775101124*^9}},
- CellLabel->"In[71]:=",ExpressionUUID->"7856f060-5b9a-43f5-8c47-4138240d7b6c"],
+     RowBox[{
+      RowBox[{"pdfClassification", "[", "\"\<social\>\"", "]"}], "[", 
+      RowBox[{"[", "1", "]"}], "]"}], ",", " ", "\"\<Plaintext\>\""}], 
+    "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.878117911997656*^9, 3.8781179520241165`*^9}},
+ CellLabel->
+  "In[113]:=",ExpressionUUID->"a0cd1950-f7d2-488b-ae5b-273ca25bfe73"],
 
 Cell[BoxData[{
  RowBox[{
@@ -88,7 +87,7 @@ Cell[BoxData[{
    RowBox[{"WordStem", "[", 
     RowBox[{"DeleteStopwords", "[", 
      RowBox[{"ToLowerCase", "[", 
-      RowBox[{"TextWords", "[", "pdf", "]"}], "]"}], "]"}], "]"}]}], 
+      RowBox[{"TextWords", "[", "pdfGreen", "]"}], "]"}], "]"}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"wordsSocial", " ", "=", " ", 
@@ -101,58 +100,80 @@ Cell[BoxData[{
   3.8780365332358713`*^9, 3.8780365454914865`*^9}, {3.878036667417382*^9, 
   3.8780367359288507`*^9}, {3.87803681874366*^9, 3.878036835074436*^9}, {
   3.878036874958724*^9, 3.878036894169489*^9}, {3.8780378206848593`*^9, 
-  3.8780380559234657`*^9}, {3.878038758724168*^9, 3.8780388244665823`*^9}},
+  3.8780380559234657`*^9}, {3.878038758724168*^9, 3.8780388244665823`*^9}, {
+  3.87811797959524*^9, 3.8781179801623683`*^9}},
  CellLabel->
-  "In[101]:=",ExpressionUUID->"061d6288-bf6d-4a6b-b491-3b6926e98e7d"],
+  "In[115]:=",ExpressionUUID->"061d6288-bf6d-4a6b-b491-3b6926e98e7d"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[{
  RowBox[{"Count", "[", 
-  RowBox[{"wordsGreen", ",", "\"\<social\>\""}], "]"}], "\[IndentingNewLine]", 
+  RowBox[{"wordsGreen", ",", "\"\<green\>\""}], "]"}], "\[IndentingNewLine]", 
  RowBox[{"Count", "[", 
-  RowBox[{"wordsSocial", ",", " ", "\"\<social\>\""}], "]"}]}], "Input",
- CellChangeTimes->{{3.878038062824874*^9, 3.878038107490255*^9}},
- CellLabel->"In[90]:=",ExpressionUUID->"ae2bcb2d-2f79-42f4-9895-5935c12c344c"],
+  RowBox[{"wordsSocial", ",", " ", "\"\<green\>\""}], "]"}]}], "Input",
+ CellChangeTimes->{{3.878038062824874*^9, 3.878038107490255*^9}, {
+  3.8781162992246847`*^9, 3.8781163116399307`*^9}},
+ CellLabel->
+  "In[117]:=",ExpressionUUID->"ae2bcb2d-2f79-42f4-9895-5935c12c344c"],
 
-Cell[BoxData["16"], "Output",
- CellChangeTimes->{{3.878038089589404*^9, 3.8780381080037427`*^9}},
- CellLabel->"Out[90]=",ExpressionUUID->"8e44bec8-5d05-4ae8-9453-7e9dd5c51ecc"],
+Cell[BoxData["31"], "Output",
+ CellChangeTimes->{{3.878038089589404*^9, 3.8780381080037427`*^9}, 
+   3.878116328688014*^9, 3.878117990004262*^9},
+ CellLabel->
+  "Out[117]=",ExpressionUUID->"d2ca1be4-9178-434c-8d60-834fe92dcec7"],
 
-Cell[BoxData["35"], "Output",
- CellChangeTimes->{{3.878038089589404*^9, 3.8780381080078306`*^9}},
- CellLabel->"Out[91]=",ExpressionUUID->"0a7ab8d8-cd6a-4618-bb8c-7c6b7b983cd6"]
+Cell[BoxData["28"], "Output",
+ CellChangeTimes->{{3.878038089589404*^9, 3.8780381080037427`*^9}, 
+   3.878116328688014*^9, 3.878117990012226*^9},
+ CellLabel->
+  "Out[118]=",ExpressionUUID->"605e39c6-72de-4ab3-be25-3a249d91567d"]
 }, Open  ]],
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"freq", " ", "=", " ", 
-   RowBox[{"WordFrequency", "[", 
-    RowBox[{"pdf", ",", "wordsGreen"}], "]"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.878036827778985*^9, 3.8780368401349306`*^9}, {
-   3.87803698048374*^9, 3.8780370202690024`*^9}, 3.878037762270913*^9, 
-   3.8780378396251316`*^9, {3.8780381935746155`*^9, 3.8780381991815543`*^9}, {
-   3.878038244618329*^9, 3.878038340229725*^9}},
+  RowBox[{"wordsGreen", " ", "=", " ", 
+   RowBox[{"DeleteCases", "[", 
+    RowBox[{"wordsGreen", ",", 
+     RowBox[{"_", "?", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"StringContainsQ", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<https\>\"", ",", "\"\<www\>\"", ",", "\"\<.com\>\"", ",", 
+            "\"\<@\>\"", ",", "\"\<\:2610\>\"", ",", "\"\<%\>\"", ",", 
+            "\"\<..\>\"", ",", "\"\<\[Copyright]\>\"", ",", " ", 
+            "\"\<\[CheckedBox]\>\""}], "}"}]}], "]"}], "&"}], ")"}]}]}], 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.8781180155375896`*^9, 3.878118015538711*^9}, {
+  3.878118049601867*^9, 3.8781180598210773`*^9}, {3.8781180906901875`*^9, 
+  3.878118096901516*^9}},
  CellLabel->
-  "In[104]:=",ExpressionUUID->"62603131-e511-4b3d-822d-b738da8363cc"],
+  "In[124]:=",ExpressionUUID->"d428ee7e-00c5-47ce-93ab-457cf18ce85f"],
 
 Cell[CellGroupData[{
 
-Cell[BoxData[
- RowBox[{"ReverseSort", "[", "freq", "]"}]], "Input",
- CellChangeTimes->{{3.8780383586338015`*^9, 3.878038400367846*^9}, {
-  3.878038568177067*^9, 3.8780385724406004`*^9}},
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"freq", " ", "=", " ", 
+   RowBox[{"WordFrequency", "[", 
+    RowBox[{"pdf", ",", "wordsGreen"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ReverseSort", "[", "freq", "]"}]}], "Input",
+ CellChangeTimes->{{3.878036827778985*^9, 3.8780368401349306`*^9}, {
+   3.87803698048374*^9, 3.8780370202690024`*^9}, 3.878037762270913*^9, 
+   3.8780378396251316`*^9, {3.8780381935746155`*^9, 3.8780381991815543`*^9}, {
+   3.878038244618329*^9, 3.878038340229725*^9}, {3.878118138128128*^9, 
+   3.8781181384108205`*^9}},
  CellLabel->
-  "In[105]:=",ExpressionUUID->"ce45b88f-30c7-441f-8c82-afc3d873ece0"],
+  "In[126]:=",ExpressionUUID->"62603131-e511-4b3d-822d-b738da8363cc"],
 
 Cell[BoxData[
  RowBox[{"\[LeftAssociation]", 
   RowBox[{
-   RowBox[{"\<\"\:2610\"\>", "\[Rule]", "0.008322779084494301`"}], ",", 
-   RowBox[{"\<\"\[CheckedBox]\"\>", "\[Rule]", "0.004342319522344852`"}], ",", 
    RowBox[{"\<\"impact\"\>", "\[Rule]", "0.0036185996019540436`"}], ",", 
    RowBox[{"\<\"criteria\"\>", "\[Rule]", "0.002894879681563235`"}], ",", 
-   RowBox[{"\<\"%\"\>", "\[Rule]", "0.002713949701465533`"}], ",", 
    RowBox[{"\<\"2020\"\>", "\[Rule]", "0.0025330197213678306`"}], ",", 
    RowBox[{"\<\"market\"\>", "\[Rule]", "0.0025330197213678306`"}], ",", 
    RowBox[{"\<\"opinion\"\>", "\[Rule]", "0.0023520897412701285`"}], ",", 
@@ -198,9 +219,6 @@ Cell[BoxData[
    RowBox[{"\<\"final\"\>", "\[Rule]", "0.0007237199203908088`"}], ",", 
    RowBox[{"\<\"gross\"\>", "\[Rule]", "0.0007237199203908088`"}], ",", 
    RowBox[{"\<\"share\"\>", "\[Rule]", "0.0007237199203908088`"}], ",", 
-   RowBox[{"\<\"https://www.abancacorporacionbancaria.com/files/documents/\
-memoria\.02corporativa-rs-2020-en.pdf\"\>", "\[Rule]", 
-    "0.0007237199203908088`"}], ",", 
    RowBox[{"\<\"portfolio\"\>", "\[Rule]", "0.0007237199203908088`"}], ",", 
    RowBox[{"\<\"power\"\>", "\[Rule]", "0.0007237199203908088`"}], ",", 
    RowBox[{"\<\"manner\"\>", "\[Rule]", "0.0007237199203908088`"}], ",", 
@@ -254,8 +272,6 @@ memoria\.02corporativa-rs-2020-en.pdf\"\>", "\[Rule]",
    RowBox[{"\<\"1990\"\>", "\[Rule]", "0.0003618599601954044`"}], ",", 
    RowBox[{"\<\"24\"\>", "\[Rule]", "0.0003618599601954044`"}], ",", 
    RowBox[{"\<\"context\"\>", "\[Rule]", "0.0003618599601954044`"}], ",", 
-   RowBox[{"\<\"https://osha.europa.eu/en/about-eu-osha/national-focal-points/\
-spain\"\>", "\[Rule]", "0.0003618599601954044`"}], ",", 
    RowBox[{"\<\"overview\"\>", "\[Rule]", "0.0003618599601954044`"}], ",", 
    RowBox[{"\<\"14\"\>", "\[Rule]", "0.0003618599601954044`"}], ",", 
    RowBox[{"\<\"13\"\>", "\[Rule]", "0.0003618599601954044`"}], ",", 
@@ -294,9 +310,6 @@ spain\"\>", "\[Rule]", "0.0003618599601954044`"}], ",",
    RowBox[{"\<\"support\"\>", "\[Rule]", "0.0003618599601954044`"}], ",", 
    RowBox[{"\<\"asset\"\>", "\[Rule]", "0.0003618599601954044`"}], ",", 
    RowBox[{"\<\"goal\"\>", "\[Rule]", "0.0003618599601954044`"}], ",", 
-   RowBox[{"\<\"\[Copyright]\"\>", "\[Rule]", "0.0003618599601954044`"}], ",", 
-   RowBox[{"\<\"www.sustainalytics.com\"\>", "\[Rule]", 
-    "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"second\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"foremost\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"pension\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
@@ -331,28 +344,15 @@ spain\"\>", "\[Rule]", "0.0003618599601954044`"}], ",",
    RowBox[{"\<\"7.2\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"agenda\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"2015\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
-   RowBox[{"\<\"https://ec.europa.eu/energy/sites/default/files/documents/ec_\
-courtesy_translation_pt_necp.pdf\"\>", "\[Rule]", "0.0001809299800977022`"}], 
-   ",", 
-   RowBox[{"\<\"https://www.iisd.org/sustainable-recovery/news/clean-recovery-\
-spain-offers-eur-181-million-for-renewable-energy-projects/\"\>", "\[Rule]", 
-    "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"181\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"offer\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
-   RowBox[{"\<\"https://ec.europa.eu/energy/sites/ener/files/documents/es_\
-final_necp_main_en.pdf\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"aee8-a78770914695\"\>", "\[Rule]", "0.0001809299800977022`"}],
     ",", 
    RowBox[{"\<\"28\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
-   RowBox[{"\<\"https://ec.europa.eu/clima/policies/strategies/2030_en\"\>", 
-    "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"26\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"roadmap\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"transform\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"25\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
-   RowBox[{"\<\"https://www.abancacorporacionbancaria.com/files/documents/\
-210304-compromiso-derechos\.02humanos-abanca-en.pdf\"\>", "\[Rule]", 
-    "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"low-carbon\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"2030.31\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"47\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
@@ -377,9 +377,6 @@ final_necp_main_en.pdf\"\>", "\[Rule]", "0.0001809299800977022`"}], ",",
    RowBox[{"\<\"local\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"14,23\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"adopt\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
-   RowBox[{"\<\"https://www.abancacorporacionbancaria.com/files/documents/\
-politica-inversion-responsable-en.pdf\"\>", "\[Rule]", 
-    "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"21\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"20\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"19\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
@@ -394,16 +391,8 @@ politica-inversion-responsable-en.pdf\"\>", "\[Rule]",
    RowBox[{"\<\"comp\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"true\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"6274\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
-   RowBox[{"\<\"https://uk.practicallaw.thomsonreuters.com/0-521\"\>", 
-    "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"15\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
-   RowBox[{"\<\"https://www.abancacorporacionbancaria.com/files/documents/\
-codigo-etico-conducta-2021-en.pdf\"\>", "\[Rule]", "0.0001809299800977022`"}],
-    ",", 
    RowBox[{"\<\"p166\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
-   RowBox[{"\<\"https://www.abancacorporacionbancaria.com/files/documents/\
-politica-sostenibilidad-en.pdf\"\>", "\[Rule]", "0.0001809299800977022`"}], 
-   ",", 
    RowBox[{"\<\"labor\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"unfair\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"global\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
@@ -435,13 +424,9 @@ politica-sostenibilidad-en.pdf\"\>", "\[Rule]", "0.0001809299800977022`"}],
    RowBox[{"\<\"p222\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"p220\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"en.pdf\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
-   RowBox[{"\<\"https://www.abancacorporacionbancaria.com/files/documents/\
-memoria-corporativa-rs-2020\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"p12\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"due\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"p72\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
-   RowBox[{"\<\"https://www.abancacorporacionbancaria.com/en/rsc/responsible-\
-banking/\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\".11\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"drive\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"\.02\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
@@ -479,9 +464,6 @@ banking/\"\>", "\[Rule]", "0.0001809299800977022`"}], ",",
    RowBox[{"\<\"place\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"action\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"paramount\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
-   RowBox[{"\<\"https://www.icmagroup.org/green\.02social-and-sustainability-\
-bonds/green-bond-principles-gbp/\"\>", "\[Rule]", "0.0001809299800977022`"}], 
-   ",", 
    RowBox[{"\<\"actual\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"address\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"warrant\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
@@ -502,13 +484,9 @@ bonds/green-bond-principles-gbp/\"\>", "\[Rule]", "0.0001809299800977022`"}],
    RowBox[{"\<\"payment\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"20 3880 0193\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"+44\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
-   RowBox[{"\<\"susfinance.emea@sustainalytics.com\"\>", "\[Rule]", 
-    "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"client\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"647 264 6641\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"+1\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
-   RowBox[{"\<\"jhankrut.shah@sustainalytics.com\"\>", "\[Rule]", 
-    "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"contact\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"select\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
    RowBox[{"\<\"environment\"\>", "\[Rule]", "0.0001809299800977022`"}], ",", 
@@ -526,8 +504,6 @@ bonds/green-bond-principles-gbp/\"\>", "\[Rule]", "0.0001809299800977022`"}],
    RowBox[{"\<\"discrep\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"monitor\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"fulli\"\>", "\[Rule]", "0.`"}], ",", 
-   RowBox[{"\<\"http://www.sustainalytics.com/legal-disclaim\"\>", "\[Rule]", 
-    "0.`"}], ",", 
    RowBox[{"\<\"third-parti\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"explicitli\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"whatsoev\"\>", "\[Rule]", "0.`"}], ",", 
@@ -631,18 +607,9 @@ bonds/green-bond-principles-gbp/\"\>", "\[Rule]", "0.0001809299800977022`"}],
    RowBox[{"\<\"assembl\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"recoveri\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"institut\"\>", "\[Rule]", "0.`"}], ",", 
-   RowBox[{"\<\"https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren__\
-custom_938915/bookmark/table?lang=en,en&bookmarkid=b365f4d1-44b0-4d52\"\>", 
-    "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"browser\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"eurostat\"\>", "\[Rule]", "0.`"}], ",", 
-   RowBox[{"\<\"https://www.irena.org/digitalarticles/2019/apr/how-\.02\
-transform-energy-system-and-reduce-carbon-emiss\"\>", "\[Rule]", "0.`"}], ",", 
-   RowBox[{"\<\"https://www.irena.org/publications/2019/apr/global-energy\.02\
-transformation-a-roadmap-to-2050-2019edit\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"edit\"\>", "\[Rule]", "0.`"}], ",", 
-   RowBox[{"\<\"https://eur-lex.europa.eu/legal\.02content/en/txt/html/?uri=\
-celex:52018dc0773&=en\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"planet\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"clean\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"economi\"\>", "\[Rule]", "0.`"}], ",", 
@@ -675,24 +642,16 @@ celex:52018dc0773&=en\"\>", "\[Rule]", "0.`"}], ",",
    RowBox[{"\<\"adequ\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"uphold\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"discrimin\"\>", "\[Rule]", "0.`"}], ",", 
-   RowBox[{"\<\"https://www.unepfi.org/member/abanca-corporacion-bancaria\.02\
-s-/\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"found\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"fi\"\>", "\[Rule]", "0.`"}], ",", 
-   RowBox[{"\<\"https://www.unpri.org/signatory-directory/abanca-corporacion-\
-bancaria\.02sa/5691.articl\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"directori\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"unpri\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"in-depth\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"corner-\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"points-spain\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"focal\"\>", "\[Rule]", "0.`"}], ",", 
-   RowBox[{"\<\"https://eur-lex.europa.eu/legal-content/en/txt/pdf/?uri=celex:\
-31989l0391&=fr\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"encourag\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"eec\"\>", "\[Rule]", "0.`"}], ",", 
-   RowBox[{"\<\"https://www.eea.europa.eu/soer/2010/countries/es/nature-\
-protection-and-biodiversity-n\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"nation\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"agenc\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"european\"\>", "\[Rule]", "0.`"}], ",", 
@@ -908,8 +867,6 @@ protection-and-biodiversity-n\"\>", "\[Rule]", "0.`"}], ",",
    RowBox[{"\<\"varieti\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"serv\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"multipl\"\>", "\[Rule]", "0.`"}], ",", 
-   RowBox[{"\<\"https://www.abancacorporacionbancaria.com/es/inversores/\
-general/#programas-de-emis\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"avail\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"associ\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"capit\"\>", "\[Rule]", "0.`"}], ",", 
@@ -1043,7 +1000,6 @@ general/#programas-de-emis\"\>", "\[Rule]", "0.`"}], ",",
    RowBox[{"\<\"consist\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"committe\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"respons\"\>", "\[Rule]", "0.`"}], ",", 
-   RowBox[{"\<\"s..\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"bancaria\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"corporaci\[OAcute]n\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"specif\"\>", "\[Rule]", "0.`"}], ",", 
@@ -1073,21 +1029,10 @@ general/#programas-de-emis\"\>", "\[Rule]", "0.`"}], ",",
    RowBox[{"\<\"second-parti\"\>", "\[Rule]", "0.`"}], ",", 
    RowBox[{"\<\"sustainalyt\"\>", "\[Rule]", "0.`"}]}], 
   "\[RightAssociation]"}]], "Output",
- CellChangeTimes->{3.8780383699949813`*^9, 3.87803840129871*^9, 
-  3.8780389186612024`*^9, 3.8780389588210135`*^9},
+ CellChangeTimes->{3.8781181576973085`*^9},
  CellLabel->
-  "Out[105]=",ExpressionUUID->"709f4e99-acf2-4b3e-8027-87e3d2ac1507"]
-}, Open  ]],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.8780377789072027`*^9, 3.878037794792009*^9}, 
-   3.8780381901754203`*^9},ExpressionUUID->"ffff3e8b-df29-41f4-8102-\
-096399fea080"],
-
-Cell[BoxData["U"], "Input",
- CellChangeTimes->{{3.8780390417332416`*^9, 
-  3.878039048292742*^9}},ExpressionUUID->"63e00165-4c4c-479b-ab9d-\
-17bcf71646c0"]
+  "Out[127]=",ExpressionUUID->"012427fa-b861-4eda-8295-8207f2a25b2a"]
+}, Open  ]]
 },
 WindowSize->{1141.2, 568.8},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
@@ -1107,24 +1052,19 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[558, 20, 1679, 40, 105, "Input",ExpressionUUID->"7889be16-c24b-481d-86e6-7cfbf3730ada"],
+Cell[2240, 62, 730, 19, 48, "Input",ExpressionUUID->"a0cd1950-f7d2-488b-ae5b-273ca25bfe73"],
+Cell[2973, 83, 1021, 22, 48, "Input",ExpressionUUID->"061d6288-bf6d-4a6b-b491-3b6926e98e7d"],
 Cell[CellGroupData[{
-Cell[580, 22, 1199, 23, 162, "Input",ExpressionUUID->"8eebf1a7-447a-4532-9d67-03a75225a97a"],
-Cell[1782, 47, 1271, 21, 90, "Output",ExpressionUUID->"55e00cba-dfd8-4e89-8b33-ddfe40ce0cdc"]
+Cell[4019, 109, 415, 8, 48, "Input",ExpressionUUID->"ae2bcb2d-2f79-42f4-9895-5935c12c344c"],
+Cell[4437, 119, 228, 4, 32, "Output",ExpressionUUID->"d2ca1be4-9178-434c-8d60-834fe92dcec7"],
+Cell[4668, 125, 228, 4, 32, "Output",ExpressionUUID->"605e39c6-72de-4ab3-be25-3a249d91567d"]
 }, Open  ]],
-Cell[3068, 71, 522, 11, 86, "Input",ExpressionUUID->"7856f060-5b9a-43f5-8c47-4138240d7b6c"],
-Cell[3593, 84, 966, 21, 48, "Input",ExpressionUUID->"061d6288-bf6d-4a6b-b491-3b6926e98e7d"],
+Cell[4911, 132, 870, 21, 28, "Input",ExpressionUUID->"d428ee7e-00c5-47ce-93ab-457cf18ce85f"],
 Cell[CellGroupData[{
-Cell[4584, 109, 360, 6, 48, "Input",ExpressionUUID->"ae2bcb2d-2f79-42f4-9895-5935c12c344c"],
-Cell[4947, 117, 176, 2, 32, "Output",ExpressionUUID->"8e44bec8-5d05-4ae8-9453-7e9dd5c51ecc"],
-Cell[5126, 121, 176, 2, 32, "Output",ExpressionUUID->"0a7ab8d8-cd6a-4618-bb8c-7c6b7b983cd6"]
-}, Open  ]],
-Cell[5317, 126, 509, 10, 28, "Input",ExpressionUUID->"62603131-e511-4b3d-822d-b738da8363cc"],
-Cell[CellGroupData[{
-Cell[5851, 140, 269, 5, 28, "Input",ExpressionUUID->"ce45b88f-30c7-441f-8c82-afc3d873ece0"],
-Cell[6123, 147, 57368, 931, 2278, "Output",ExpressionUUID->"709f4e99-acf2-4b3e-8027-87e3d2ac1507"]
-}, Open  ]],
-Cell[63506, 1081, 179, 3, 28, "Input",ExpressionUUID->"ffff3e8b-df29-41f4-8102-096399fea080"],
-Cell[63688, 1086, 155, 3, 28, "Input",ExpressionUUID->"63e00165-4c4c-479b-ab9d-17bcf71646c0"]
+Cell[5806, 157, 631, 12, 48, "Input",ExpressionUUID->"62603131-e511-4b3d-822d-b738da8363cc"],
+Cell[6440, 171, 53056, 862, 1903, "Output",ExpressionUUID->"012427fa-b861-4eda-8295-8207f2a25b2a"]
+}, Open  ]]
 }
 ]
 *)
