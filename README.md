@@ -12,3 +12,6 @@ The trained classifier was able to accurately predict the classification of gree
 
 # 🤖 Conclusion
 In conclusion, we were able to successfully classify green bonds using machine learning techniques. The trained classifier can be used to accurately predict the classification of green bonds, which can help investors identify and invest in environmentally friendly projects.
+
+# 📹 Video
+Unfortunately, we are experiencing problems during the export of the video. A link will be added asap.
